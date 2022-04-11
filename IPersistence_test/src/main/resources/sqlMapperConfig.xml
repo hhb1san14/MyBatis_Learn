@@ -1,0 +1,12 @@
+<configuration>
+    <!-- 数据库配置信息 -->
+    <dataSource>
+        <properties name="driverClass" value="com.mysql.jdbc.driver" />
+        <properties name = "jdbcUrl" value = "" />
+        <properties name = "username" value = "" />
+        <properties name = "password" value = "" />
+    </dataSource>
+
+    <mapper name = "IPersistence_test/src/main/resources/UserMapper.xml"></mapper>
+
+</configuration>

@@ -1,0 +1,14 @@
+<mapper namespace="UserMapper">
+    <!--   通过 namespace.id 可以确定唯一 -->
+    <select id="selectList" resultType="com.hhb.pojo.User">
+        select * from user;
+    </select>
+    <!--
+    User user = new User();
+    user.setId(1);
+    user.setUserName("张三");
+    -->
+    <select id="selectOne" resultType="com.hhb.pojo.User" paramterType="com.hhb.pojo.User">
+        select * from user where id = #{id} and userName = #{userName}
+    </select>
+</mapper>
