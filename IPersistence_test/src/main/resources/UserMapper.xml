@@ -1,5 +1,5 @@
 <mapper namespace="UserMapper">
-    <!--   通过 namespace.id 可以确定唯一 -->
+    <!--   通过 namespace.id 可以确定唯一 ，组成的statementid -->
     <select id="selectList" resultType="com.hhb.pojo.User">
         select * from user;
     </select>
@@ -8,7 +8,7 @@
     user.setId(1);
     user.setUserName("张三");
     -->
-    <select id="selectOne" resultType="com.hhb.pojo.User" paramterType="com.hhb.pojo.User">
+    <select id="selectOne" resultType="com.hhb.pojo.User" paramType="com.hhb.pojo.User">
         select * from user where id = #{id} and userName = #{userName}
     </select>
 </mapper>

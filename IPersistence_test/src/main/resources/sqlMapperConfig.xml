@@ -7,6 +7,6 @@
         <properties name = "password" value = "" />
     </dataSource>
 
-    <mapper name = "IPersistence_test/src/main/resources/UserMapper.xml"></mapper>
+    <mapper name = "UserMapper.xml"></mapper>
 
 </configuration>

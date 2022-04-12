@@ -13,8 +13,4 @@ public class Resource {
         InputStream resourceAsStream = Resource.class.getClassLoader().getResourceAsStream(path);
         return resourceAsStream;
     }
-
-    public static void main(String[] args) {
-        System.err.println(123);
-    }
 }
