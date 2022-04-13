@@ -4,6 +4,7 @@ import com.hhb.io.Resource;
 import com.hhb.sqlSession.SqlSession;
 import com.hhb.sqlSession.SqlSessionFactory;
 import com.hhb.sqlSession.SqlSessionFactoryBuilder;
+import org.junit.Test;
 
 import java.io.InputStream;
 
@@ -15,7 +16,8 @@ import java.io.InputStream;
 public class IPersistenceTest {
 
 
-    public void test(){
+    @Test
+    public void test() {
         InputStream resourceAsInputStream = Resource.getResourceAsInputStream("sqlMapperConfig.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resourceAsInputStream);
         SqlSession sqlSession = sqlSessionFactory.openSession();
