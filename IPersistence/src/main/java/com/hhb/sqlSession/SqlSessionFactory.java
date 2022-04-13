@@ -6,4 +6,6 @@ package com.hhb.sqlSession;
  * @description
  */
 public interface SqlSessionFactory {
+
+    public SqlSession openSession();
 }
