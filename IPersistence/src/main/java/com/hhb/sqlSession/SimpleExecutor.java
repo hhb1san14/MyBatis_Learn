@@ -58,6 +58,14 @@ public class SimpleExecutor implements Executor {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+                preparedStatement.close();
+                resultSet.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return (List<E>) list;
     }
