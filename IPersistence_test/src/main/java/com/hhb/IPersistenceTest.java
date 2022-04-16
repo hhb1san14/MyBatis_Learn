@@ -23,8 +23,12 @@ public class IPersistenceTest {
         InputStream resourceAsInputStream = Resource.getResourceAsInputStream("sqlMapperConfig.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resourceAsInputStream);
         SqlSession sqlSession = sqlSessionFactory.openSession();
-        List<User> list = sqlSession.selectList("UserMapper.selectList", null);
-        System.err.println(list);
+//        List<User> list = sqlSession.selectList("UserMapper.selectList", null);
+//        System.err.println(list);
+        User user = new User();
+        user.setId(1L);
+        User result = sqlSession.selectOne("UserMapper.selectOne", user);
+        System.err.println(result);
     }
 
 

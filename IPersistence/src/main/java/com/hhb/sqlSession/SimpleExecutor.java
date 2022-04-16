@@ -84,7 +84,7 @@ public class SimpleExecutor implements Executor {
             Field field = clazz.getDeclaredField(content);
             // 防止属性私有，暴力破解
             field.setAccessible(true);
-            // 假设可变参数只有一个
+            //假设只有一个可变参数且为对象
             Object o = field.get(params[0]);
             preparedStatement.setObject(i + 1, o);
         }

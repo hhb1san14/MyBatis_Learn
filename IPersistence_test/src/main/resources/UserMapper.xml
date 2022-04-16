@@ -9,6 +9,6 @@
     user.setUserName("张三");
     -->
     <select id="selectOne" resultType="com.hhb.pojo.User" paramType="com.hhb.pojo.User">
-        select * from user_info where id = #{id} and userName = #{userName}
+        select * from user_info where id = #{id}
     </select>
 </mapper>
