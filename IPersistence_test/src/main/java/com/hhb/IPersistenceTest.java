@@ -1,12 +1,14 @@
 package com.hhb;
 
 import com.hhb.io.Resource;
+import com.hhb.pojo.User;
 import com.hhb.sqlSession.SqlSession;
 import com.hhb.sqlSession.SqlSessionFactory;
 import com.hhb.sqlSession.SqlSessionFactoryBuilder;
 import org.junit.Test;
 
 import java.io.InputStream;
+import java.util.List;
 
 /**
  * @author hhb
@@ -21,7 +23,8 @@ public class IPersistenceTest {
         InputStream resourceAsInputStream = Resource.getResourceAsInputStream("sqlMapperConfig.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resourceAsInputStream);
         SqlSession sqlSession = sqlSessionFactory.openSession();
-
+        List<User> list = sqlSession.selectList("UserMapper.selectList", null);
+        System.err.println(list);
     }
 
 

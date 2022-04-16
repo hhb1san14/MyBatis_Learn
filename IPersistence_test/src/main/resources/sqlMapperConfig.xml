@@ -1,10 +1,10 @@
 <configuration>
     <!-- 数据库配置信息 -->
     <dataSource>
-        <properties name="driverClass" value="com.mysql.jdbc.driver" />
-        <properties name = "jdbcUrl" value = "" />
-        <properties name = "username" value = "" />
-        <properties name = "password" value = "" />
+        <properties name="driverClass" value="com.mysql.jdbc.Driver" />
+        <properties name = "jdbcUrl" value = "jdbc:mysql://59.110.241.53:3306/mybatis" />
+        <properties name = "username" value = "hhb" />
+        <properties name = "password" value = "12345678" />
     </dataSource>
 
     <mapper name = "UserMapper.xml"></mapper>

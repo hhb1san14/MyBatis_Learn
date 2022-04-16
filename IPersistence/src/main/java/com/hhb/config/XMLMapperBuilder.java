@@ -43,7 +43,7 @@ public class XMLMapperBuilder {
                 String paramType = element.attributeValue("paramType");
                 String sql = element.getTextTrim();
                 MappedStatement mappedStatement = new MappedStatement(id, resultType, paramType, sql);
-                String key = namespace + "," + id;
+                String key = namespace + "." + id;
                 // 设置configuration中对象属性
                 configuration.getMap().put(key, mappedStatement);
             }

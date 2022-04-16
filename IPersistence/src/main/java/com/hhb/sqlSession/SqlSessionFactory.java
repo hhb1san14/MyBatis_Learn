@@ -7,5 +7,5 @@ package com.hhb.sqlSession;
  */
 public interface SqlSessionFactory {
 
-    public SqlSession openSession();
+    SqlSession openSession();
 }

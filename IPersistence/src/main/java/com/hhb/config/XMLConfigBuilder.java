@@ -76,7 +76,7 @@ public class XMLConfigBuilder {
             ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource();
             comboPooledDataSource.setDriverClass(properties.getProperty("driverClass"));
             comboPooledDataSource.setJdbcUrl(properties.getProperty("jdbcUrl"));
-            comboPooledDataSource.setUser(properties.getProperty("userName"));
+            comboPooledDataSource.setUser(properties.getProperty("username"));
             comboPooledDataSource.setPassword(properties.getProperty("password"));
             // 封装成Configuration
             configuration.setDataSource(comboPooledDataSource);
