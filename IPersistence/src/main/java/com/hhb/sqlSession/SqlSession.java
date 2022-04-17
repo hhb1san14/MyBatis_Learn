@@ -12,4 +12,12 @@ public interface SqlSession {
     <E> List<E> selectList(String statementId, Object... params);
 
     <T> T selectOne(String statementId, Object... params);
+
+    /**
+     *
+     * @param mapperClass
+     * @param <T>
+     * @return
+     */
+    <T> T getMapper(Class<?> mapperClass);
 }
