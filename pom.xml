@@ -11,6 +11,7 @@
     <modules>
         <module>IPersistence</module>
         <module>IPersistence_test</module>
+        <module></module>
     </modules>
 
     <!--引入依赖-->
