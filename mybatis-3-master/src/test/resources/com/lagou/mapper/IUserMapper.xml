@@ -7,7 +7,7 @@
 
     <resultMap id="userMap" type="com.lagou.pojo.User">
         <id property="id" column="id"></id>
-        <result property="username" column="username"></result>
+        <result property="username" column="userName"></result>
 
         <collection property="orderList" ofType="com.lagou.pojo.Order"
                     select="com.lagou.mapper.IOrderMapper.findOrderByUid" column="id" fetchType="lazy">
@@ -25,7 +25,7 @@
 
 
    <select id="findById" resultMap="userMap"  >
-       select * from user where id = #{id}
+       select * from user_info where id = #{id}
    </select>
 
 

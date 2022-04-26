@@ -32,9 +32,10 @@ public class MybatisTest {
         //(2)将查询任务委派了executor执行器
         List<User> user = sqlSession.selectList("com.lagou.mapper.IUserMapper.findById");
         System.out.println(user);
-        User user2 = sqlSession.selectOne("com.lagou.mapper.IUserMapper.findById", 1);
-        System.out.println(user2);
-
+//        User user2 = sqlSession.selectOne("com.lagou.mapper.IUserMapper.findById", 1);
+//        System.out.println(user2);
+//
+        IUserMapper mapper = sqlSession.getMapper(IUserMapper.class);
         // 5.释放资源
         sqlSession.close();
 
